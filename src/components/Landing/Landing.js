@@ -2,20 +2,22 @@ import React, { useState } from "react";
 import "./Landing.css";
 
 const Landing = (props) => {
-  // const { userName, setUserName } = useContext(UserContext);
-  // console.log('landing', setUserName);
   const [enteredName, setEnteredName] = useState("");
   const [isValid, setIsValid] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
   const nameHandler = (e) => {
+    if (e.target.value.length === 2) {
+      setShowMessage(true);
+    }
     if (e.target.value.length > 2) {
       setIsValid(true);
+      setShowMessage(false);
     } else {
       setIsValid(false);
+
     }
     setEnteredName(e.target.value);
-
-    // console.log(e.target.value);
   };
   const formHandler = (e) => {
     e.preventDefault();
@@ -23,8 +25,6 @@ const Landing = (props) => {
       setIsValid(false);
       return;
     }
-    // console.log(enteredName);
-    // setUserName(enteredName);
     props.onSetUserName(enteredName);
     setEnteredName("");
   };
@@ -48,7 +48,7 @@ const Landing = (props) => {
             onChange={nameHandler}
             value={enteredName}
           />
-          <p className={`text-danger ${!isValid ? 'visible' : 'invisible'}`}>It must be longer than 2 characters</p>
+          <p className={`text-danger ${showMessage ? 'visible' : 'invisible'}`}>It must be longer than 2 characters</p>
 
         </div>
         <button className="btn btn-dark btn-75 py-2 fs-3 fw-bold cam-btn d-block m-auto mt-3" type="submit" disabled={!isValid}>

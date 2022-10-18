@@ -11,23 +11,19 @@ const Basket = (props) => {
 
   const purchaseHandler = () => {
     const basketInfo = props.basket;
-    // console.log(basketInfo);
     const userData = props.userData;
-    // console.log(userData);
     const purchaseData = [basketInfo, ...userData];
-    console.log(JSON.stringify(purchaseData));
-    fetch('http://localhost/moon_basket/moon_basket_create.php', {
-      method: 'POST', // or 'PUT'
+    fetch('https://acilio.codefactory.live/moon_basket/moon_basket_create.php', {
+      method: 'POST',
       body: JSON.stringify(purchaseData)
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log('Success:', data.message);
+        props.onClearBasket(data.message);
       })
       .catch((error) => {
         console.error('Error:', error);
       });
-    props.onClearBasket();
   }
 
   const total = () => {

@@ -1,7 +1,5 @@
 .dFlex{
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 .cart-img{
     max-width: 100%;
@@ -11,9 +9,7 @@
     background-color: rgb(190, 195, 199);
 }
 .basket-area{
-    /* color: blue; */
     background-color: rgba(59, 113, 202, 0.4);
-
 }
 
 @media screen and (max-width: 780px){

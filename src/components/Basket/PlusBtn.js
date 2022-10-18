@@ -3,7 +3,6 @@ import React from "react";
 const PlusBtn = (props) => {
 
     const PlusHandler = () => {
-        // console.log(props.id)
         props.onClickPlus(props.id)
     }
 

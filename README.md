@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Moonshiner Product Scanner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project description
+Application developed in order to make easier for customers to scann and add products to the cart.
+With the help of https://serratus.github.io/quaggaJS/ the mobile/laptop/pc cam can recognize and scann
+a bar code and fetch its value
 
-## Available Scripts
+# User Instructions
+Access 
+https://aciliocarraro.github.io
+Add the user name that must be longers than 2 characters and click Login.
+The id will be automatically generated.
+In "Scanner", by pressing the "Start" button, it will activate the cam. You may have to give it permission.
+The "Start" button will automatically change to "Stop" giving you the chance to stop the cam.
+Point the cam focus to a barcode and apreciate how fast the application recognizes it.
+A new form will be enabled giving you the chance to change the products name. Enter a new name and click
+"Save product name" or just accept the given name by clicking the button.
+In "Basket" you will be able to visualise the products that were added to the cart and change their quantities. Be aware that if you click the "-" and the quantity is already 1, it will remove the product
+from the cart. Both buttons "+" pr "-" will change the "Total items" and "Total price" of the cart.
+Once you are happy with the products and their quantities, click on the "Checkout" out button.
+It will clear you cart and send the purchase to the database.
 
-In the project directory, you can run:
+# Dev Instructions
+If any changes were made to this repo, make sure to run the commands below:
+npm run build
+npm run deploy
+The github branch gh-pages will be updated and so the website.
 
-### `npm start`
+# Components
+Basket
+    Basket
+    MinusBtn
+    PlusBtn
+Head
+Landing
+Logo
+Scanner
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Credits
+Qhagga barcode scanner library:
+https://serratus.github.io/quaggaJS/
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

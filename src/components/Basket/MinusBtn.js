@@ -3,7 +3,6 @@ import React from "react";
 const MinusBtn = (props) => {
 
     const minusHandler = () => {
-        // console.log(props.id)
         props.onClickMinus(props.id)
     }
 

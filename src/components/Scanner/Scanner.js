@@ -19,7 +19,6 @@ const Scanner = (props) => {
     if (prodName.trim().length === 0) {
       return;
     }
-    console.log(prodName);
     props.onAddBarCode(barcode, prodName);
     setProdName("");
     setShowForm(false)
@@ -43,13 +42,6 @@ const Scanner = (props) => {
   const _onDetected = (res) => {
     setBarcode(res.codeResult.code);
     setProdName("Product" + Math.floor(Math.random() * 1000))
-    // props.onAddBarCode({
-    //   id: Math.random().toString(),
-    //   barcode: res.codeResult.code,
-    //   product_name: prodName
-    // });
-    console.log(res.codeResult.code);
-    // stopScanner();
     setIsStart(false);
     setShowForm(true);
   };
@@ -60,7 +52,7 @@ const Scanner = (props) => {
           type: "LiveStream",
           target: document.querySelector("#scanner-container"),
           constraints: {
-            facingMode: "environment", // or user
+            facingMode: "environment",
           },
         },
         numOfWorkers: navigator.hardwareConcurrency,

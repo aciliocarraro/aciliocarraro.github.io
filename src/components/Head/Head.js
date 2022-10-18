@@ -4,7 +4,6 @@ import "./Head.css";
 
 const Head = (props) => {
   const userData = props.userData;
-  console.log(userData[0].name);
   return (
     <div className="head bg-primary m-0">
       <Logo />

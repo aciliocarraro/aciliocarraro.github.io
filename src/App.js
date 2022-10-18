@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import "./App.css";
 
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-// import HomeLayout from "./components/HomeLayout/HomeLayout";
 import Landing from "./components/Landing/Landing";
 import Basket from "./components/Basket/Basket";
 import Head from "./components/Head/Head";
-import Scanner from "./components/newScanner/Scanner";
+import Scanner from "./components/Scanner/Scanner";
 
 function App() {
   const unId = () => {
@@ -24,6 +23,7 @@ function App() {
   ]);
 
   const [basket, setBasket] = useState([
+    //for testing only
     // {
     //   id: unId(),
     //   barcode: "123456",
@@ -42,7 +42,6 @@ function App() {
     });
   }
   const minusHandler = (itemId) => {
-    // console.log('minus', itemId)
     const index = basket.findIndex(item => item.id === itemId);
     const tempArray = [...basket];
     if (tempArray[index].product_qtty === 1) {
@@ -68,9 +67,9 @@ function App() {
       return
     }
   }
-  const clearBasket = () => {
+  const clearBasket = (message) => {
     setBasket([]);
-    alert('Thank you for shopping with us ');
+    alert('Thank you for shopping with us ' + message);
   }
 
   const totalItems = () => {
@@ -96,15 +95,9 @@ function App() {
         product_qtty: 1
       }]
     })
-    console.log(totalItems());
-    // setBasketQtt((prevValue) => {
-    //   return prevValue * totalItems();
-    // });
+
   }
   return (
-    // nav-link d-flex align-items-center fs-4"
-    //['nav-link d-flex align-items-center', isActive? 'text-primary fs-4': 'fs-3'].filter(Boolean).join(" ") 
-    //filter is optional
     <BrowserRouter>
       <Head userData={userData} />
       <div className="app-container">
