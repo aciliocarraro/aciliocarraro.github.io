@@ -1,0 +1,12 @@
+.head {
+  position: relative;
+  height: 30vh;
+  /* border-radius: 1%; */
+}
+.user-name{
+  position: absolute;
+  bottom: 0;
+  width: 100%; 
+  display: flex;
+  justify-content: flex-start;
+}

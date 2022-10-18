@@ -1,0 +1,36 @@
+.basket-link-text{
+  position: relative;
+}
+.sup{
+  position: absolute;
+  bottom: 0.5em;
+  font-size: 0.8em;
+  border-radius: 30%;
+  padding: 3px;
+
+}
+.landing-nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-item{
+  text-decoration: none;
+  padding: 0.10rem 0;
+}
+.btn-75{
+  width: 100%;
+}
+
+@media screen and (min-width: 480px){
+  .landing-nav{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .nav-item{
+    padding: 0.5rem 0;
+  }
+  .btn-75{
+    width: 50%;
+  }
+}
