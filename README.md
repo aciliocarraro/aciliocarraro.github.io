@@ -19,6 +19,9 @@ In "Basket" you will be able to visualise the products that were added to the ca
 from the cart. Both buttons "+" pr "-" will change the "Total items" and "Total price" of the cart.
 Once you are happy with the products and their quantities, click on the "Checkout" out button.
 It will clear you cart and send the purchase to the database.
+By accessing the api below, give the user_id and the items can be seen online:
+https://acilio.codefactory.live/moon_basket/display_all.php?id=user_id
+
 
 # Dev Instructions
 If any changes were made to this repo, make sure to run the commands below:
